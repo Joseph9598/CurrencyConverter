@@ -8,24 +8,24 @@ public class ConversorMoedas {
     //aqui é o metodo principal onde vamos chamar todas as funções
     public static void main(String[] args) {
 
-        {
-            boolean continuar = true;
 
-            while (continuar) {
-                exibirMenu();
-                int opcao = lerOpcaoValida();
+        boolean continuar = true;
 
-                if (opcao == 7) {
-                    continuar = false;
-                    System.out.println("Programa finalizado!");
-                } else if (opcao >= 1 && opcao <= 6) {
-                    String[] moedas = Moedas.obterMoedasParaConversao(opcao);
-                    MetodoConverter.converterMoeda(moedas[0], moedas[1]);
-                } else {
-                    System.out.println("Opção inválida, tente novamente...");
-                }
+        while (continuar) {
+            exibirMenu();
+            int opcao = lerOpcaoValida();
+
+            if (opcao == 7) {
+                continuar = false;
+                System.out.println("Programa finalizado!");
+            } else if (opcao >= 1 && opcao <= 6) {
+                String[] moedas = Moedas.obterMoedasParaConversao(opcao);
+                MetodoConverter.converterMoeda(moedas[0], moedas[1]);
+            } else {
+                System.out.println("Opção inválida, tente novamente...");
             }
         }
+    }
 
 
         private static void exibirMenu () {
@@ -40,7 +40,7 @@ public class ConversorMoedas {
             System.out.println("7 - Sair");
         }
         //Aqui valida-se a resposta do usuário quando vai selecionar a moeda de conversão ou sair do programa
-        private static int lerOpcaoValida () {
+        public static int lerOpcaoValida () {
             int opcao = scanner.nextInt();
             return opcao;
         }
@@ -56,4 +56,6 @@ public class ConversorMoedas {
         }
 
     }
-}
+
+
+
