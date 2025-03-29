@@ -31,12 +31,12 @@ public class ConversorMoedas {
         private static void exibirMenu () {
 
             System.out.println("Selecione uma opção de conversão:");
-            System.out.println("1 - USD para EUR");
-            System.out.println("2 - USD para GBP");
-            System.out.println("3 - USD para BRL");
-            System.out.println("4 - EUR para USD");
-            System.out.println("5 - GBP para USD");
-            System.out.println("6 - BRL para USD");
+            System.out.println("1 - EUR para USD");
+            System.out.println("2 - GBP para USD");
+            System.out.println("3 - BRL para USD");
+            System.out.println("4 - USD para EUR");
+            System.out.println("5 - USD para GBP");
+            System.out.println("6 - USD para BRL");
             System.out.println("7 - Sair");
         }
         //Aqui valida-se a resposta do usuário quando vai selecionar a moeda de conversão ou sair do programa
